@@ -1,0 +1,1 @@
+python tools/test.py /home/will/transformer/my_own_code/mmocr/configs/textrecog/robust_scanner/robustscanner_r31_academic.py  /home/will/transformer/my_own_code/mmocr/roubust_demo/latest.pth --show --show-dir tools/result/ --show-score-thr 0.25 --eval acc
