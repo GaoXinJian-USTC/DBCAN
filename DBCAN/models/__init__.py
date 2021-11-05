@@ -1,7 +1,7 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 from . import textrecog
 from .builder import (BACKBONES, CONVERTORS, DECODERS, DETECTORS, ENCODERS,
-                      HEADS, LOSSES, PREPROCESSOR, build_backbone,
+                       LOSSES, PREPROCESSOR, build_backbone,
                       build_convertor, build_decoder, build_detector,
                       build_encoder, build_loss, build_preprocessor)
 from .textrecog import *  # NOQA
