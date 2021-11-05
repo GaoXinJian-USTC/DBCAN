@@ -10,7 +10,7 @@ from DBCAN.models.textrecog.layers import (DotProductAttentionLayer,
 from .base_decoder import BaseDecoder
 from mmcv.runner import BaseModule
 import numpy as np
-from .Position_embedding import Adaptive2DPositionalEncoding,Adaptive3x3
+from .Position_embedding import Adaptive2DPositionalEncoding,ScaleAdaptiveLogPolarEmb
 
 @DECODERS.register_module()
 class PositionDecoder(BaseDecoder):
@@ -39,7 +39,7 @@ class PositionDecoder(BaseDecoder):
         self.position_aware_module = PositionAwareLayer(
             self.dim_model, rnn_layers)
         self.attention_layer = DotProductAttentionLayer()
-        self.adaptive_pos_end = Adaptive3x3()
+        self.adaptive_pos_end = ScaleAdaptiveLogPolarEmb()
         self.prediction = None
         if not self.return_feature:
             pred_num_classes = num_classes - 1

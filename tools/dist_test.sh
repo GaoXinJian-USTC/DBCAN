@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-# if [ $# -lt 3 ]
-# then
-#     echo "Usage: bash $0 CONFIG CHECKPOINT GPUS"
-#     exit
-# fi
+if [ $# -lt 3 ]
+then
+    echo "Usage: bash $0 CONFIG CHECKPOINT GPUS"
+    exit
+fi
 
-CONFIG=configs/DBCAN.py
-CHECKPOINT=best.pth
-GPUS=2
+CONFIG=$1
+CHECKPOINT=$2
+GPUS=$3
 PORT=${PORT:-29500}
 
 PYTHONPATH="$(dirname $0)/..":$PYTHONPATH \
