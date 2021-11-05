@@ -10,11 +10,11 @@ import mmcv
 from mmcv.utils import ProgressBar
 from mmdet.apis import init_detector
 
-from mmocr.apis import model_inference
-from mmocr.core.evaluation.ocr_metric import eval_ocr_metric
-from mmocr.datasets import build_dataset  # noqa: F401
-from mmocr.models import build_detector  # noqa: F401
-from mmocr.utils import get_root_logger, list_from_file, list_to_file
+from DBCAN.apis import model_inference
+from DBCAN.core.evaluation.ocr_metric import eval_ocr_metric
+from DBCAN.datasets import build_dataset  # noqa: F401
+from DBCAN.models import build_detector  # noqa: F401
+from DBCAN.utils import get_root_logger, list_from_file, list_to_file
 
 
 def save_results(img_paths, pred_labels, gt_labels, res_dir):

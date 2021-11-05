@@ -19,7 +19,6 @@ cd DBCAN && pip install -r requirements.txt
 ```
 ## Data Preparing
 
-
 - For Training data and Test data, just follow the instructions in https://mmocr.readthedocs.io/en/latest/datasets/recog.html
 
 - Specially,for IC15 and IC13, We use the protocol proposed in [1], we provide the these two datasets on 
@@ -50,4 +49,4 @@ Two simple steps to train your own model:
 The code of this project is modified from [MMOCR](https://github.com/open-mmlab/mmocr).
 
 
-[1] Kai Wang, Boris Babenko, and Serge Belongie. End-to-endscene text recognition. In ICCV, pages 1457–1464. IEEE,2011.
+```[1] Kai Wang, Boris Babenko, and Serge Belongie. End-to-endscene text recognition. In ICCV, pages 1457–1464. IEEE,2011.```
