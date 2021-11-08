@@ -12,15 +12,14 @@ from mmcv.image.misc import tensor2imgs
 from mmcv.runner import load_checkpoint
 from mmcv.utils.config import Config
 
-from mmocr.apis import init_detector
-from mmocr.apis.inference import model_inference
-from mmocr.core.visualize import det_recog_show_result
-from mmocr.datasets.kie_dataset import KIEDataset
-from mmocr.datasets.pipelines.crop import crop_img
-from mmocr.models import build_detector
-from mmocr.utils.box_util import stitch_boxes_into_lines
-from mmocr.utils.fileio import list_from_file
-from mmocr.utils.model import revert_sync_batchnorm
+from DBCAN.apis import init_detector
+from DBCAN.apis.inference import model_inference
+from DBCAN.core.visualize import det_recog_show_result
+from DBCAN.datasets.pipelines.crop import crop_img
+from DBCAN.models import build_detector
+from DBCAN.utils.box_util import stitch_boxes_into_lines
+from DBCAN.utils.fileio import list_from_file
+from DBCAN.utils.model import revert_sync_batchnorm
 
 
 # Parse CLI arguments
@@ -160,7 +159,7 @@ def parse_args():
     return args
 
 
-class MMOCR:
+class DBCAN:
 
     def __init__(self,
                  det='PANet_IC15',
@@ -334,7 +333,7 @@ class MMOCR:
                 det_config = os.path.join(config_dir, 'textdet/',
                                           textdet_models[self.td]['config'])
             if not det_ckpt:
-                det_ckpt = 'https://download.openmmlab.com/mmocr/textdet/' + \
+                det_ckpt = 'https://download.openmmlab.com/DBCAN/textdet/' + \
                     textdet_models[self.td]['ckpt']
 
             self.detect_model = init_detector(
@@ -349,7 +348,7 @@ class MMOCR:
                     config_dir, 'textrecog/',
                     textrecog_models[self.tr]['config'])
             if not recog_ckpt:
-                recog_ckpt = 'https://download.openmmlab.com/mmocr/' + \
+                recog_ckpt = 'https://download.openmmlab.com/DBCAN/' + \
                     'textrecog/' + textrecog_models[self.tr]['ckpt']
 
             self.recog_model = init_detector(
@@ -363,7 +362,7 @@ class MMOCR:
                 kie_config = os.path.join(config_dir, 'kie/',
                                           kie_models[self.kie]['config'])
             if not kie_ckpt:
-                kie_ckpt = 'https://download.openmmlab.com/mmocr/' + \
+                kie_ckpt = 'https://download.openmmlab.com/DBCAN/' + \
                     'kie/' + kie_models[self.kie]['ckpt']
 
             kie_cfg = Config.fromfile(kie_config)
@@ -406,7 +405,7 @@ class MMOCR:
 
         pp_result = None
 
-        # Send args and models to the MMOCR model inference API
+        # Send args and models to the DBCAN model inference API
         # and call post-processing functions for the output
         if self.detect_model and self.recog_model:
             det_recog_result = self.det_recog_kie_inference(
@@ -684,7 +683,7 @@ class MMOCR:
 # Create an inference pipeline with parsed arguments
 def main():
     args = parse_args()
-    ocr = MMOCR(**vars(args))
+    ocr = DBCAN(**vars(args))
     ocr.readtext(**vars(args))
 
 

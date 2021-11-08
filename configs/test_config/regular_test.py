@@ -168,7 +168,7 @@ data = dict(
         pipeline=test_pipeline),
     test=dict(
         type='UniformConcatDataset',
-        datasets=[eval(f"test{i}") for i in range(1,5) ],
+        datasets=[eval(f"test{i}") for i in range(1,4) ],
         pipeline=test_pipeline))
 
 evaluation = dict(interval=1, metric='acc')
