@@ -21,7 +21,7 @@ cd DBCAN && pip install -r requirements.txt
 
 - For Training data and Test data, just follow the instructions in https://mmocr.readthedocs.io/en/latest/datasets/recog.html
 
-- Specially,for IC15 and IC13, We use the protocol proposed in [1], we provide the these two datasets on 
+- Specially,for IC15 and IC13, We use the protocol proposed in [1], we provide the two datasets on 
 
 - > [BaiduYun](https://pan.baidu.com/s/1eUjlnX7wf1sQG8NYGaMNzA) key:u2jh
 
