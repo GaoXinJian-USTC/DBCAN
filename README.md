@@ -1,4 +1,4 @@
-# To Fuse Semantic and Positional Clues with Cross-Attention for Scene Text Recognition
+# DBCAN: Dual-Branch Cross-attention Newtwork for Scene Text Recognition
 
 > [Paper Link](#)
 
