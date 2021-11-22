@@ -30,7 +30,7 @@ cd DBCAN && pip install -r requirements.txt
 
 We provide code for using our pretrained model to recognize text images.
 
-- The pretrained model can be downloaded via Baidu net disk: [download_link](https://pan.baidu.com/s/1sCfGQl7pLPxPIB9FmSlNcQ) key: aeo1
+- Our model can be downloaded via Baidu net disk: [download_link](https://pan.baidu.com/s/1sCfGQl7pLPxPIB9FmSlNcQ) key: aeo1
 
 - Edit the file ```configs/DBCAN.py``` Make sure the paths of test datasets are right.
 
