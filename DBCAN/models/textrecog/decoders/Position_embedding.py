@@ -97,7 +97,7 @@ class PosCNN(BaseModule):
         return ['proj.%d.weight' % i for i in range(4)]
 
 
-class ScaleAdaptiveLogPolarEmb(BaseModule):
+class CBSAEmb(BaseModule):
     def __init__(self,
                  d_hid=128,
                  n_height=48,
