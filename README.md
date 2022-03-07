@@ -1,4 +1,4 @@
-# DBCAN: Dual-Branch Cross-attention Newtwork for Scene Text Recognition
+# DBCAN: Dual-Branch Cross-Attention Newtwork for Scene Text Recognition
 
 > [Paper Link](#)
 
