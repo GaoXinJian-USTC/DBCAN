@@ -1,6 +1,6 @@
 # DBCAN: Dual-Branch Cross-Attention Newtwork for Scene Text Recognition
 
-> [Paper Link](#)
+> [Paper Link](https://ieeexplore.ieee.org/abstract/document/9859826/)
 
 
 ## Requirements
